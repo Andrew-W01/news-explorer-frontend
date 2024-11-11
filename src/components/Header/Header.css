@@ -1,0 +1,17 @@
+.header {
+  background-image: url("../../assets/Header-image.png");
+  height: 576px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__title {
+  color: #000;
+  margin: 0;
+}
+
+.header__subtitle {
+  color: #000;
+  margin: 0;
+}
