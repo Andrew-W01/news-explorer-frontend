@@ -1,8 +1,12 @@
 import { Navigate } from "react-router-dom";
 import Nav from "../Nav/Nav";
-// When i load the app, isLoggedIn will be false, pretty much always
 
-const ProtectedRoute = () => {
+const ProtectedRoute = ({
+  children,
+  isLoggedIn,
+  isAuthSettled,
+  setActiveModal,
+}) => {
   if (!isAuthSettled) {
     return <Nav isInverse={true} />;
   }

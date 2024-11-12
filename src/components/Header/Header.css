@@ -1,17 +1,61 @@
 .header {
-  background-image: url("../../assets/Header-image.png");
-  height: 576px;
+  background-image: url("../../assets/header-background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.header[data-theme="dark"] {
+  --primary: #fff;
+  --border: rgba(255, 255, 255, 0.2);
+}
+
+.header[data-theme="light"] {
+  --primary: black;
+  --border: #d1d2d6;
+}
+
+.header__nav-container {
+  border-bottom: solid;
+  padding-bottom: 12px;
+  border-color: var(--border);
+}
+
+.header__logo-container {
+  max-width: 200px;
+}
+
+.header__text-container {
+  margin: 0 auto;
+  max-width: 608px;
+  display: flex;
+  flex-direction: column;
+}
+
 .header__title {
-  color: #000;
+  font-size: 60px;
+  font-family: "Roboto-Slab-reg", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 64px;
+  color: #fff;
   margin: 0;
+  padding-top: 80px;
 }
 
 .header__subtitle {
-  color: #000;
   margin: 0;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 32px;
+}
+
+.header__logo {
+  font-family: "Roboto-Slab", "Inter";
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
 }

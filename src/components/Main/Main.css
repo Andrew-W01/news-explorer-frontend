@@ -1,0 +1,25 @@
+.home {
+  margin: 0 auto;
+  max-width: 608px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__title {
+  font-size: 60px;
+  font-family: "Roboto-Slab";
+  font-weight: 700;
+  line-height: 64px;
+  color: #fff;
+  margin: 0;
+}
+
+.home__subtitle {
+  margin: 0;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 32px;
+}
