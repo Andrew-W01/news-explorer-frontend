@@ -1,5 +1,7 @@
 import { processServerResponse } from "../utils/utils";
 
+const baseUrl = "http://localhost:3001";
+
 export const signinUser = ({ email, password }) => {
   return fetch(`${baseUrl}/signin`, {
     method: "POST",

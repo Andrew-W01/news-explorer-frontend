@@ -101,7 +101,6 @@ function App() {
     const keyword = currentKeyword[0].toUpperCase() + currentKeyword.slice(1);
     if (!token) return;
 
-    // check if the article is already in the userArticles array
     if (
       userArticles.some((existingArticle) => {
         return existingArticle.link === article.url;

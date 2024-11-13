@@ -2,14 +2,14 @@ import "../Header/Header.css";
 import Nav from "../Nav/Nav";
 import SearchForm from "../SearchForm/SearchForm";
 
-function Header(
+function Header({
   handleSearchSubmit,
   handleLoginClick,
   isLoggedIn,
   handleLogout,
   setCurrentKeyword,
-  currentKeyword
-) {
+  currentKeyword,
+}) {
   const isInverse = false;
   return (
     <header className="header" data-theme={isInverse ? "light" : "dark"}>
