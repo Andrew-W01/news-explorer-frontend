@@ -1,7 +1,16 @@
-import { Children } from "react";
 import "./ModalWithForm.css";
 
-function ModalWithForm() {
+function ModalWithForm({
+  onSubmit,
+  isOpen,
+  title,
+  onClose,
+  children,
+  buttonText,
+  altButtonClick,
+  altButtonText,
+  formValid,
+}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
@@ -22,29 +31,30 @@ function ModalWithForm() {
           type="button"
           onClick={onClose}
         ></button>
-        <form action="" onSubmit={handleSubmit} className="modal__form"></form>
-        {children}
-        <div className="modal__buttons-container">
-          <button
-            className={`modal__submit modal__el_hovered ${
-              !formValid ? "modal__submit_disabled" : ""
-            }`}
-            type="submit"
-            disabled={`${!formValid ? "disabled" : ""}`}
-          >
-            {" "}
-            {buttonText}
-          </button>
-          <button
-            className={"modal__text-button modal__el_hovered"}
-            type="button"
-            onClick={altButtonClick}
-          >
-            <span className="modal__or">or</span> {altButtonText}
-          </button>
-        </div>
+        <form action="" onSubmit={handleSubmit} className="modal__form">
+          {children}
+          <div className="modal__buttons-container">
+            <button
+              className={`modal__submit modal__el_hovered ${
+                !formValid ? "modal__submit_disabled" : ""
+              }`}
+              type="submit"
+              disabled={`${!formValid ? "disabled" : ""}`}
+            >
+              {buttonText}
+            </button>
+            <button
+              className={"modal__text-button modal__el_hovered"}
+              type="button"
+              onClick={altButtonClick}
+            >
+              <span className="modal__or">or</span> {altButtonText}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
 }
+
 export default ModalWithForm;

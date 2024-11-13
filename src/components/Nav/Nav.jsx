@@ -7,11 +7,11 @@ import { useState } from "react";
 function Nav({ handleLoginClick, isInverse, isLoggedIn, handleLogout }) {
   const [isClicked, setIsClicked] = useState(false);
 
-  const handleHamburgerClick = () => {
+  const handleMainClick = () => {
     setIsClicked(true);
   };
 
-  const handleHamburgerCloseClick = () => {
+  const handleMainCloseClick = () => {
     setIsClicked(false);
   };
 
@@ -19,7 +19,7 @@ function Nav({ handleLoginClick, isInverse, isLoggedIn, handleLogout }) {
     <nav className="nav" data-theme={isInverse ? "light" : "dark"}>
       <p className="nav__logo">NewsExplorer</p>
       <button
-        onClick={handleHamburgerClick}
+        onClick={handleMainClick}
         className={
           isInverse ? "nav__menu-btn nav__menu-btn--black" : "nav__menu-btn"
         }
@@ -33,7 +33,7 @@ function Nav({ handleLoginClick, isInverse, isLoggedIn, handleLogout }) {
       {isClicked ? (
         <MainMenu
           isLoggedIn={isLoggedIn}
-          onClose={handleHamburgerCloseClick}
+          onClose={handleMainCloseClick}
           handleLoginClick={handleLoginClick}
           handleLogout={handleLogout}
         />
