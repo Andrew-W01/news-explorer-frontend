@@ -1,6 +1,6 @@
 import { processServerResponse } from "./utils";
 
-const baseUrl = "http://localhost:3001";
+const baseUrl = "http://localhost:3000";
 
 function getUserArticles(token) {
   return fetch(`${baseUrl}/articles`, {
