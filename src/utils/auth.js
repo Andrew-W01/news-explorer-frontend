@@ -23,6 +23,8 @@ export const registerUser = ({ name, email, password }) => {
 };
 
 export const getUserByToken = (token) => {
+  console.log(token);
+
   return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {

@@ -150,7 +150,6 @@ function App() {
       })
       .catch((err) => console.error(err));
   };
-
   const handleLogin = (values, resetLoginForm) => {
     if (!values) {
       return;
@@ -159,14 +158,15 @@ function App() {
     signinUser(values)
       .then((res) => {
         setToken(res.token);
-        return getUserByToken(res.token);
-      })
-      .then((user) => {
-        setCurrentUser(user);
-        setIsLoggedIn(true);
-        closeActiveModal();
-        resetLoginForm();
-        navigate("/");
+        if (res.token) {
+          getUserByToken(res.token).then((user) => {
+            setCurrentUser(user);
+            setIsLoggedIn(true);
+            closeActiveModal();
+            resetLoginForm();
+            navigate("/");
+          });
+        }
       })
       .catch((err) => {
         console.error("Login failed", err);
