@@ -154,9 +154,9 @@ function App() {
     if (!values) {
       return;
     }
-
     signinUser(values)
       .then((res) => {
+        console.log(res);
         setToken(res.token);
         if (res.token) {
           getUserByToken(res.token).then((user) => {
