@@ -2,7 +2,7 @@ import "../SavedNews/SavedNews.css";
 import Nav from "../Nav/Nav";
 import SavedNewsHeader from "../SavedNewsHeader/SavedNewsHeader";
 import SavedCardsList from "../SavedCardsList/SavedCardsList";
-// import { pageAppearances } from "../../utils/pageAppearances";
+import { pageAppearances } from "../../utils/pageAppearances";
 
 function SavedNews({ isLoggedIn, handleLogout, handleDeleteArticle }) {
   const isInverse = pageAppearances.home === "dark";

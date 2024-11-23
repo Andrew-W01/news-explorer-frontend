@@ -159,7 +159,7 @@ function App() {
         console.log(res);
         setToken(res.token);
         if (res.token) {
-          getUserByToken(res.token).then((user) => {
+          getUserByToken(res).then((user) => {
             setCurrentUser(user);
             setIsLoggedIn(true);
             closeActiveModal();

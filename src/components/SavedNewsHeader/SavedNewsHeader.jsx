@@ -1,3 +1,8 @@
+import "../SavedNewsHeader/SavedNewsHeader.css";
+import { useContext } from "react";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { UserArticleContext } from "../../contexts/UserArticleContext";
+
 function SavedNewsHeader() {
   const { currentUser } = useContext(CurrentUserContext);
   const { userArticles } = useContext(UserArticleContext);
@@ -10,6 +15,7 @@ function SavedNewsHeader() {
       }
       return accumulator;
     }, []);
+
   return (
     <section className="saved-news-header">
       <h3 className="saved-news-header__title">Saved articles</h3>
