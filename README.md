@@ -1,5 +1,3 @@
-# news-explorer-frontend
-
 # News-Explorer-Frontend
 
 ## About the Project
