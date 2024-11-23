@@ -16,4 +16,4 @@ The idea of the project is to make a call to a public news API, which responds w
 
 ## Links
 
-- [Deployed Site](https://dapper-phoenix-088b8d.netlify.app/)
+- [Deployed Site](https://andrew-w01.github.io/news-explorer-frontend/)
