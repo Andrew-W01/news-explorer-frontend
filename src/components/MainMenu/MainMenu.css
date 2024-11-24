@@ -1,0 +1,110 @@
+.main-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1a1b22;
+  width: 100%;
+  height: 230px;
+  margin: 0;
+}
+
+.main-menu[data-theme="dark"] {
+  --primary: #fff;
+  --border: rgba(255, 255, 255, 0.2);
+}
+
+.main-menu[data-theme="light"] {
+  --primary: black;
+  --border: #d1d2d6;
+}
+
+.menu__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__logo {
+  font-family: "Roboto-Slab";
+  font-size: 20px;
+  font-weight: 700;
+  margin: none;
+  color: #fff;
+  padding-left: 16px;
+}
+
+.menu__close {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  background-image: url("../../assets/close-button.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 16px;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  padding: 0;
+  position: relative;
+}
+
+.menu__list {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-left: 16px;
+}
+
+.menu__item {
+  padding: 0;
+}
+
+.menu__link {
+  font-family: "Roboto-500";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 0;
+}
+
+.menu__link_loggedin {
+  padding: 25px;
+}
+
+.menu__signin-btn {
+  width: 288px;
+  height: 56px;
+  border-radius: 100px;
+  background: none;
+  font-family: "Roboto-500";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  padding-top: 0;
+  margin: 22px auto;
+}
+
+.menu__signout-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 230px;
+}

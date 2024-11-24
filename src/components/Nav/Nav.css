@@ -7,6 +7,16 @@
   padding: 19px 104px 0 104px;
 }
 
+.nav[data-theme="dark"] {
+  --primary: #fff;
+  --border: rgba(255, 255, 255, 0.2);
+}
+
+.nav[data-theme="light"] {
+  --primary: black;
+  --border: #d1d2d6;
+}
+
 .nav__logo {
   font-family: "Roboto-Slab";
   font-size: 20px;
@@ -54,9 +64,51 @@
   cursor: pointer;
 }
 
+.nav__link {
+  font-family: "Roboto-500";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.nav__link_focused {
+  border-bottom: solid;
+  border-color: (var(--primary));
+  padding-bottom: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-width: 3px;
+}
+
+.nav__signout-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 100px;
+  border-width: 1px;
+  border: solid;
+  height: 48px;
+  width: 112px;
+  background: transparent;
+  padding: 0;
+  color: var(--primary);
+}
+
+.nav__signout-name {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
 .nav__signout-btn {
   border: none;
-
+  background-image: url("../../assets/logout-black.svg");
   height: 24px;
   width: 24px;
   background-size: cover;
@@ -65,4 +117,8 @@
 
 .nav__signout-btn:hover {
   cursor: pointer;
+}
+
+.nav__signout-btn--white {
+  background-image: url("../../assets/logout-white.svg");
 }
