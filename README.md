@@ -16,5 +16,5 @@ The idea of the project is to make a call to a public news API, which responds w
 
 ## Links
 
-- [Deployment](https://andrew-w01.github.io/news-explorer-frontend/)
+- [Deployment](https://andrew-w01.github.io/news-explorer-frontend/) -[Site URL](https://aw-newsexplorer.wildsurf.net/)
 - [URL to backend](https://github.com/Andrew-W01/news-explorer-backend)
