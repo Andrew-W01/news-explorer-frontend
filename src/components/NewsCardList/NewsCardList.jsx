@@ -15,7 +15,6 @@ function NewsCardList({
   setActiveModal,
 }) {
   newsData = newsData.filter((article) => article.title !== "[Removed]");
-  //filter out articles that say "removed"
 
   const [activeNewsDataLength, setActiveNewsDataLength] = useState(3);
   const activeNewsDataItems = newsData.slice(0, activeNewsDataLength);
