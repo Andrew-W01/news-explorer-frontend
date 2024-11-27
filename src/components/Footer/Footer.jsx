@@ -14,21 +14,21 @@ function Footer() {
         <a
           href="https://tripleten.com/"
           target="_blank"
-          className="footer__link footer__link__tripleten"
+          className="footer__link footer__link-tripleten"
         >
           TripleTen
         </a>
         <a
           href="https://github.com/Andrew-W01"
           target="_blank"
-          className="footer__link footer__link__github"
+          className="footer__link footer__link-github"
         >
           <img src={github} alt="" className="footer__icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/andrewworleytech/"
           target="_blank"
-          className="footer__link footer__link__linkedin"
+          className="footer__link footer__link-linkedin"
         >
           <img src={linkedin} alt="" className="footer__icon" />
         </a>

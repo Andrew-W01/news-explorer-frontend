@@ -67,7 +67,9 @@ function NewsCardList({
         </h3>
       </div>
 
-      <h2 className="news-cards-list__title">Search results</h2>
+      {newsData.length > 0 && (
+        <h2 className="news-cards-list__title">Search results</h2>
+      )}
       <div className="news-cards-list__container">
         <ul className="news-cards-list__list">
           {activeNewsDataItems.map((article) => (

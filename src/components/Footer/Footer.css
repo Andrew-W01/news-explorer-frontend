@@ -7,7 +7,7 @@
 
 .footer__copyright {
   color: #b6bcbf;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -29,7 +29,7 @@
 
 .footer__link {
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -39,4 +39,19 @@
 
 .footer__link:hover {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 850px) {
+  .footer {
+    padding: 18px 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 320px;
+    padding: 20px 16px 22px;
+  }
 }

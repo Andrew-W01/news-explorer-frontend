@@ -7,7 +7,7 @@
 
 .home__title {
   font-size: 60px;
-  font-family: "Roboto-Slab";
+  font-family: "Roboto-Slab", "Arial", sans-serif;
   font-weight: 700;
   line-height: 64px;
   color: #fff;
@@ -17,7 +17,7 @@
 .home__subtitle {
   margin: 0;
   color: #fff;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 400px;
   font-size: 18px;
   line-height: 24px;
