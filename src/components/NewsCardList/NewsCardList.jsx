@@ -72,14 +72,16 @@ function NewsCardList({
       <div className="news-cards-list__container">
         <ul className="news-cards-list__list">
           {activeNewsDataItems.map((article) => (
-            <NewsCard
-              isLoggedIn={isLoggedIn}
-              key={article.url}
-              article={article}
-              handleSaveArticle={handleSaveArticle}
-              handleDeleteArticle={handleDeleteArticle}
-              setActiveModal={setActiveModal}
-            />
+            <li key={article.url} className="news-cards-list__item">
+              <NewsCard
+                isLoggedIn={isLoggedIn}
+                key={article.url}
+                article={article}
+                handleSaveArticle={handleSaveArticle}
+                handleDeleteArticle={handleDeleteArticle}
+                setActiveModal={setActiveModal}
+              />
+            </li>
           ))}
         </ul>
       </div>
