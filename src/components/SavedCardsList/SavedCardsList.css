@@ -1,13 +1,12 @@
 .saved-cards {
   margin: 0;
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
   gap: 16px;
+  flex-wrap: wrap;
   list-style-type: none;
   margin-top: 64px;
-  padding: 62px 104px;
+  margin-left: 104px;
+  padding: 0 16px; /* Reduce padding for more space */
   background-color: #f5f6f7;
 }
 

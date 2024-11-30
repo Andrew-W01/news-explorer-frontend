@@ -85,9 +85,14 @@ function NewsCardList({
           ))}
         </ul>
       </div>
-      <button onClick={handleOnClick} className="news-cards-list__more-button">
-        Show more
-      </button>
+      {newsData.length > activeNewsDataLength && (
+        <button
+          onClick={handleOnClick}
+          className="news-cards-list__more-button"
+        >
+          Show more
+        </button>
+      )}
     </section>
   );
 }

@@ -8,7 +8,7 @@ function Footer() {
     <footer className="footer">
       <p className="footer__copyright">© 2024 Supersite, Powered by News API</p>
       <div className="footer__links-container">
-        <Link to="/" className="footer__link footer__link__home">
+        <Link to="/" className="footer__link footer__link-home">
           <p className="footer__home">Home</p>
         </Link>
         <a

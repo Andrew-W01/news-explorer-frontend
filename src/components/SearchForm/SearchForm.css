@@ -60,7 +60,7 @@
   background-color: #347eff;
 }
 .search__submit-button:active {
-  background-color: #00008b;
+  background-color: #2a65cc;
   transform: scale(0.98);
 }
 

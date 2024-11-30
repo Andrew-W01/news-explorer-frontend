@@ -1,11 +1,30 @@
 import "../MainMenu/MainMenu.css";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
-function MainMenu() {
+function MainMenu({
+  isLoggedIn,
+  onClose,
+  handleLoginClick,
+  handleLogout,
+  isInverse,
+}) {
+  const { currentUser } = useContext(CurrentUserContext);
+
+  const signoutBtnClass = !isInverse
+    ? "nav__signout-btn nav__signout-btn--white"
+    : "nav__signout-btn";
+
   return (
     <div className="main-menu">
       <div className="menu__top">
         <p className="menu__logo">NewsExplorer</p>
-        <button className="menu__close-btn" type="button"></button>
+        <button
+          className="menu__close-btn"
+          type="button"
+          onClick={onClose}
+        ></button>
       </div>
 
       <div className="menu__links">
