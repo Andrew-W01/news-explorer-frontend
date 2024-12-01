@@ -3,9 +3,10 @@
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
   list-style-type: none;
   margin-top: 64px;
-  margin-left: 104px;
+
   padding: 0 16px; /* Reduce padding for more space */
   background-color: #f5f6f7;
 }

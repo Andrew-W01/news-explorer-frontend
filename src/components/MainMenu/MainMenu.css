@@ -34,7 +34,7 @@
   padding-left: 16px;
 }
 
-.menu__close {
+.menu__close-btn {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -106,5 +106,6 @@
   flex-direction: row;
   align-items: center;
   padding-top: 40px;
-  padding-left: 230px;
+  width: 100%;
+  margin-left: 180px;
 }

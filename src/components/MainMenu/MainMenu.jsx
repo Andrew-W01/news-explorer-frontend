@@ -32,7 +32,7 @@ function MainMenu({
           <>
             <ul className="menu__list">
               <li className="menu-item">
-                <Link to="/" className="menu__link -menu__link_loggedin">
+                <Link to="/" className="menu__link menu__link_loggedin">
                   Home
                 </Link>
               </li>
@@ -46,7 +46,7 @@ function MainMenu({
               </li>
             </ul>
             <div className="menu__signout-div">
-              <p className="menu-signout-name">Elise{currentUser?.name}</p>
+              <p className="menu-signout-name">{currentUser?.name}</p>
               <button
                 onClick={handleLogout}
                 className={signoutBtnClass}

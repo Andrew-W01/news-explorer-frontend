@@ -11,13 +11,13 @@
 .news-cards-list__list {
   margin: 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 16px;
   list-style-type: none;
   margin-top: 64px;
-  padding-left: 104px;
+  padding: 0 16px;
 }
 
 .news-cards-list__title {
