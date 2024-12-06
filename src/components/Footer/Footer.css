@@ -45,6 +45,10 @@
   .footer {
     padding: 18px 40px;
   }
+  .footer__copyright {
+    text-wrap: nowrap;
+    margin-right: 20px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -53,5 +57,8 @@
     align-items: center;
     max-width: 320px;
     padding: 20px 16px 22px;
+  }
+  .footer__copyright {
+    text-wrap: nowrap;
   }
 }
