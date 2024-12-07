@@ -91,7 +91,7 @@ function App() {
     registerUser(values)
       .then((res) => {
         console.log(res);
-        setIsLoggedIn(true);
+        setLoggedIn(true);
         setCurrentUser(res.data);
         resetRegistrationForm();
         closeActiveModal();
