@@ -185,7 +185,7 @@ function App() {
     signinUser(values)
       .then((res) => {
         setToken(res.token); // Save token in localStorage
-        setLoggedIn(true); // Update login state
+        setIsLoggedIn(true); // Update login state
         closeActiveModal(); // Close the modal
         resetLoginForm(); // Reset form values
       })
