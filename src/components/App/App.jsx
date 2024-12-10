@@ -184,10 +184,12 @@ function App() {
 
     signinUser(values)
       .then((res) => {
-        setToken(res.token); // Save token in localStorage
-        setIsLoggedIn(true); // Update login state
-        closeActiveModal(); // Close the modal
-        resetLoginForm(); // Reset form values
+        setToken(res.token);
+        setCurrentUser(user);
+        setIsLoggedIn(true);
+        closeActiveModal();
+        resetLoginForm();
+        navigate("/");
       })
       .catch((err) => {
         console.error(`Login failed: ${err}`);
