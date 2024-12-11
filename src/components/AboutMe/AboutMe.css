@@ -20,7 +20,7 @@
 }
 
 .about__title {
-  font-family: "Roboto-Slab-reg";
+  font-family: "Roboto-Slab-reg", "Arial", sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 46px;
@@ -32,11 +32,44 @@
 
 .about__text {
   padding-top: 10px;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
   max-width: 600px;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 850px) {
+  .about__selfie-container {
+    height: 232px;
+    width: 232px;
+  }
+  .about {
+    padding: 40px;
+  }
+
+  .about__selfie-container {
+    height: 232px;
+    width: 232px;
+  }
+  .about__text {
+    max-width: 424px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about {
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 24px;
+  }
+  .about__title {
+    margin: 0;
+  }
+  .about__selfie-container {
+    height: 272px;
+    width: 272px;
+  }
 }

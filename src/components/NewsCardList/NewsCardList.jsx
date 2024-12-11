@@ -15,7 +15,6 @@ function NewsCardList({
   setActiveModal,
 }) {
   newsData = newsData.filter((article) => article.title !== "[Removed]");
-  //filter out articles that say "removed"
 
   const [activeNewsDataLength, setActiveNewsDataLength] = useState(3);
   const activeNewsDataItems = newsData.slice(0, activeNewsDataLength);
@@ -67,24 +66,33 @@ function NewsCardList({
         </h3>
       </div>
 
-      <h2 className="news-cards-list__title">Search results</h2>
+      {newsData.length > 0 && (
+        <h2 className="news-cards-list__title">Search results</h2>
+      )}
       <div className="news-cards-list__container">
         <ul className="news-cards-list__list">
           {activeNewsDataItems.map((article) => (
-            <NewsCard
-              isLoggedIn={isLoggedIn}
-              key={article.url}
-              article={article}
-              handleSaveArticle={handleSaveArticle}
-              handleDeleteArticle={handleDeleteArticle}
-              setActiveModal={setActiveModal}
-            />
+            <li key={article.url} className="news-cards-list__item">
+              <NewsCard
+                isLoggedIn={isLoggedIn}
+                key={article.url}
+                article={article}
+                handleSaveArticle={handleSaveArticle}
+                handleDeleteArticle={handleDeleteArticle}
+                setActiveModal={setActiveModal}
+              />
+            </li>
           ))}
         </ul>
       </div>
-      <button onClick={handleOnClick} className="news-cards-list__more-button">
-        Show more
-      </button>
+      {newsData.length > activeNewsDataLength && (
+        <button
+          onClick={handleOnClick}
+          className="news-cards-list__more-button"
+        >
+          Show more
+        </button>
+      )}
     </section>
   );
 }
