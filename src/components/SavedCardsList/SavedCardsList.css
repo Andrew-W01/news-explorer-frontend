@@ -1,18 +1,28 @@
 .saved-cards {
-  margin: 0;
   display: flex;
-  gap: 16px;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
   list-style-type: none;
   margin-top: 64px;
-
-  padding: 0 16px; /* Reduce padding for more space */
+  margin-left: 100px;
+  padding: 0;
   background-color: #f5f6f7;
 }
-
 @media screen and (max-width: 850px) {
   .saved-cards {
+    margin: 0;
+    padding-left: 35px;
+    padding-top: 45px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .saved-cards {
     gap: 8px;
+    margin: 0;
+    padding-left: 16px;
+    padding-top: 45px;
   }
 }

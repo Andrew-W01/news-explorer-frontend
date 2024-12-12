@@ -17,8 +17,15 @@ function NewsCard({
 
   const source =
     location.pathname === "/"
-      ? article.source.name.toUpperCase().split(".")[0]
-      : article.source.toUpperCase().split(".")[0];
+      ? (typeof article.source?.name === "string"
+          ? article.source.name
+          : "Unknown Source"
+        )
+          .toUpperCase()
+          .split(".")[0]
+      : (typeof article.source === "string" ? article.source : "Unknown Source")
+          .toUpperCase()
+          .split(".")[0];
   const dateInWords = new Date(
     location.pathname === "/" ? article.publishedAt : article.date
   ).toLocaleString("default", {
@@ -75,7 +82,7 @@ function NewsCard({
           )}
         </div>
         <img
-          src={location.pathname === "/" ? article.urlToImage : article.image}
+          src={article.urlToImage}
           alt={article.title}
           className="news-card__image"
         />
