@@ -1,28 +1,42 @@
 .saved-cards {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 16px;
+  flex-wrap: wrap; /* Ensure items wrap to the next row */
+  justify-content: center; /* Center the cards */
+  gap: 16px; /* Add consistent spacing between cards */
   list-style-type: none;
-  margin-top: 64px;
-  margin-left: 100px;
+  margin: 64px auto; /* Center the container */
   padding: 0;
+  max-width: 100%;
   background-color: #f5f6f7;
 }
+.saved-cards .card {
+  flex: 1 1 calc(33.333% - 16px); /* Adjust card width to 3 per row, accounting for gap */
+  max-width: calc(33.333% - 16px);
+  /* box-sizing: border-box; Include padding/border in width calculations */
+}
+
 @media screen and (max-width: 850px) {
   .saved-cards {
-    margin: 0;
-    padding-left: 35px;
+    margin: 64px auto 0 auto;
+    padding-left: 0;
     padding-top: 45px;
+    gap: 12px;
+  }
+  .saved-cards .card {
+    flex: 1 1 45%;
+    max-width: 45%;
   }
 }
 
 @media screen and (max-width: 450px) {
   .saved-cards {
     gap: 8px;
-    margin: 0;
-    padding-left: 16px;
+    margin: 45px auto 0 auto;
+    padding-left: 0;
     padding-top: 45px;
+  }
+  .saved-cards .card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }

@@ -47,10 +47,9 @@
   position: absolute;
   right: 16px;
 }
-
 .menu__links {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Ensure links stack in a column */
   align-items: flex-start;
   color: #fff;
   padding: 0;
@@ -61,8 +60,10 @@
   text-decoration: none;
   list-style: none;
   display: flex;
+  flex-direction: column; /* Stack items in a column */
+  gap: 16px; /* Add spacing between links */
   padding: 0;
-  margin-left: 16px;
+  margin: 0 16px; /* Adjust margin for consistent spacing */
 }
 
 .menu__item {
@@ -74,10 +75,10 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
-  text-align: center;
+  text-align: left; /* Align text to the left */
   text-decoration: none;
   color: #fff;
-  padding-left: 18px;
+  padding: 8px 0; /* Add padding for clickable area */
 }
 
 .menu__link_loggedin {
