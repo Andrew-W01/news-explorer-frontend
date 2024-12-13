@@ -169,3 +169,75 @@
 .news-card__btns:hover .news-card__sign-in-icon {
   visibility: visible;
 }
+
+@media screen and (max-width: 850px) {
+  .news-card__container {
+    height: 420px;
+    width: 222px;
+    gap: 8px;
+  }
+
+  .news-card__image-container {
+    height: 150px;
+  }
+
+  .news-card__save {
+    right: 8px;
+    top: 8px;
+  }
+
+  .news-card__delete {
+    right: 8px;
+    top: 8px;
+  }
+
+  .news-card__title {
+    margin: 12px 16px;
+    font-size: 22px;
+  }
+
+  .news-card__description {
+    margin: 0 16px;
+    max-height: 88px;
+    overflow: hidden;
+  }
+  .news-card__source {
+    bottom: 16px;
+    left: 16px;
+  }
+  .news-card__keyword-icon {
+    width: 117px;
+    height: 40px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .news-card__sign-in-icon {
+    top: 8px;
+    left: 8px;
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .news-card__container {
+    height: 438px;
+    width: 286px;
+  }
+  .news-card__image-container {
+    height: 196px;
+  }
+  .news-card__save {
+    right: 16px;
+    top: 16px;
+  }
+
+  .news-card__delete {
+    right: 16px;
+    top: 16px;
+  }
+  .news-card__keyword-icon {
+    left: 16px;
+    top: 16px;
+  }
+}

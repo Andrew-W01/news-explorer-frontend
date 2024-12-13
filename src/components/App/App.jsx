@@ -12,7 +12,13 @@ import SuccessModal from "../SuccessModal/SuccessModal";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { UserArticleContext } from "../../contexts/UserArticleContext";
-import { getUserByToken, signinUser, registerUser } from "../../utils/auth";
+import {
+  getUserByToken,
+  signinUser,
+  registerUser,
+  checkToken,
+  authorize,
+} from "../../utils/auth";
 import { getToken, setToken, removeToken } from "../../utils/token";
 import { getNews } from "../../utils/newsapi";
 import { APIkey } from "../../utils/constants";
@@ -85,7 +91,7 @@ function App() {
     registerUser(values)
       .then((res) => {
         console.log(res);
-        setIsLoggedIn(true);
+        setLoggedIn(true);
         setCurrentUser(res.data);
         resetRegistrationForm();
         closeActiveModal();
@@ -150,26 +156,43 @@ function App() {
       })
       .catch((err) => console.error(err));
   };
+  // const handleLogin = (values, resetLoginForm) => {
+  //   if (!values) {
+  //     return;
+  //   }
+  //   signinUser(values)
+  //     .then((res) => {
+  //       console.log(res);
+  //       setToken(res.token);
+  //       if (res.token) {
+  //         getUserByToken(res).then((user) => {
+  //           setCurrentUser(user);
+  //           setIsLoggedIn(true);
+  //           closeActiveModal();
+  //           resetLoginForm();
+  //           navigate("/");
+  //         });
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.error("Login failed", err);
+  //     });
+  // };
+
   const handleLogin = (values, resetLoginForm) => {
-    if (!values) {
-      return;
-    }
+    if (!values) return;
+
     signinUser(values)
       .then((res) => {
-        console.log(res);
         setToken(res.token);
-        if (res.token) {
-          getUserByToken(res).then((user) => {
-            setCurrentUser(user);
-            setIsLoggedIn(true);
-            closeActiveModal();
-            resetLoginForm();
-            navigate("/");
-          });
-        }
+        setCurrentUser(user);
+        setIsLoggedIn(true);
+        closeActiveModal();
+        resetLoginForm();
+        navigate("/");
       })
       .catch((err) => {
-        console.error("Login failed", err);
+        console.error(`Login failed: ${err}`);
       });
   };
 
@@ -181,14 +204,30 @@ function App() {
     removeToken();
   };
 
+  // useEffect(() => {
+  //   if (!isLoggedIn) return;
+
+  //   const token = getToken();
+  //   getUserArticles(token).then((articles) => {
+  //     setUserArticles(articles);
+  //   });
+  // }, [currentUser, isLoggedIn]);
+
   useEffect(() => {
     if (!isLoggedIn) return;
 
-    const token = getToken();
-    getUserArticles(token).then((articles) => {
-      setUserArticles(articles);
-    });
-  }, [currentUser, isLoggedIn]);
+    const token = getToken(); // Get token from localStorage
+    if (token) {
+      checkToken(token)
+        .then((res) => {
+          setCurrentUser(res.data); // Set the current user data
+        })
+        .catch((err) => {
+          console.error(`Error checking token: ${err}`);
+          setIsLoggedIn(false); // Reset login state on error
+        });
+    }
+  }, [isLoggedIn]);
 
   useEffect(() => {
     if (!activeModal) return;

@@ -9,18 +9,15 @@
 }
 
 .news-cards-list__list {
-  margin: 0;
+  margin: 0 auto; /* Center the list container */
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 16px;
+  justify-content: center; /* Center cards horizontally */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 16px; /* Space between cards */
   list-style-type: none;
-  margin-top: 64px;
-  padding-left: 104px;
-  padding-right: 104px;
+  padding: 0; /* Remove left padding */
+  margin-top: 64px; /* Keep top margin */
 }
-
 .news-cards-list__title {
   margin: 0;
   padding-left: 104px;
@@ -116,4 +113,29 @@
   color: #b6bcbf;
   padding-top: 180px;
   margin: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .news-cards-list__list {
+    padding: 0 20px; /* Add slight horizontal padding */
+    gap: 12px; /* Adjust spacing for smaller screens */
+  }
+  .news-cards-list__title {
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+  .news-cards-list__title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .news-cards-list__list {
+    padding: 0; /* Remove padding */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center align single-column cards */
+  }
+  .news-cards-list__title {
+    padding: 32px 16px 0 16px;
+  }
 }

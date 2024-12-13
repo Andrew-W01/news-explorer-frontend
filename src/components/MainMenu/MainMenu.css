@@ -23,10 +23,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-left: 18px;
 }
 
 .menu__logo {
-  font-family: "Roboto-Slab";
+  font-family: "Roboto-Slab", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 700;
   margin: none;
@@ -34,22 +35,21 @@
   padding-left: 16px;
 }
 
-.menu__close {
+.menu__close-btn {
   border: none;
   background-color: transparent;
   cursor: pointer;
   height: 24px;
   width: 24px;
-  background-image: url("../../assets/close-button.svg");
+  background-image: url("../../assets/close-button.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   right: 16px;
 }
-
 .menu__links {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Ensure links stack in a column */
   align-items: flex-start;
   color: #fff;
   padding: 0;
@@ -60,8 +60,10 @@
   text-decoration: none;
   list-style: none;
   display: flex;
+  flex-direction: column; /* Stack items in a column */
+  gap: 16px; /* Add spacing between links */
   padding: 0;
-  margin-left: 16px;
+  margin: 0 16px; /* Adjust margin for consistent spacing */
 }
 
 .menu__item {
@@ -69,14 +71,14 @@
 }
 
 .menu__link {
-  font-family: "Roboto-500";
+  font-family: "Roboto-500", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
-  text-align: center;
+  text-align: left; /* Align text to the left */
   text-decoration: none;
   color: #fff;
-  padding: 0;
+  padding: 8px 0; /* Add padding for clickable area */
 }
 
 .menu__link_loggedin {
@@ -88,7 +90,7 @@
   height: 56px;
   border-radius: 100px;
   background: none;
-  font-family: "Roboto-500";
+  font-family: "Roboto-500", "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -105,6 +107,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
   padding-top: 40px;
-  padding-left: 230px;
+  padding-right: 20px;
+  position: absolute;
+  top: 80px;
+  right: -0px;
+  width: calc(100% - 40px);
 }
